@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitation to Speaking Event</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    main {
+      margin-top: 1rem;
+    }
+    form {
+      background-color: #fafafa;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 0.5em;
+    }
+    section {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Invitation to Speaking Event</h1>
+    <p>Welcome to Web Development Week2 Assignment. Please complete the required details below.</p>
+  </header>
+
+  <main>
+
+    <!-- Section with list -->
+    <section>
+      <h2>Features of This Form</h2>
+      <ul>
+        <li>HTML5 semantic elements</li>
+        <li>Built-in validation</li>
+        <li>Variety of input types</li>
+        <li>Accessible layout</li>
+        <li>Includes multimedia and tabular data</li>
+      </ul>
+    </section>
+
+    <!-- Media section -->
+    <section>
+      <h2>Short Video</h2>
+      <video controls width="400">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Table section -->
+    <section>
+      <h2>Event Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>Time</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Welcome</td>
+            <td>09:00 AM</td>
+            <td>Litabe Shadrack</td>
+          </tr>
+          <tr>
+            <td>Workshop</td>
+            <td>10:00 AM</td>
+            <td>Thabo Joseph</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Form section -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+        
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your full name" required autocomplete="name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +1234567890" pattern="^\+?\d{10,15}$">
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Interests</label>
+        <input type="checkbox" id="coding" name="interests" value="coding">
+        <label for="coding">Coding</label><br>
+        <input type="checkbox" id="music" name="interests" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label>
+
+        <label>Preferred Contact Method</label>
+        <input type="radio" id="contact-email" name="contact" value="email" required>
+        <label for="contact-email">Email</label><br>
+        <input type="radio" id="contact-phone" name="contact" value="phone">
+        <label for="contact-phone">Phone</label>
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..."></textarea>
+
+        <label for="readonly-field">Referral Code</label>
+        <input type="text" id="readonly-field" name="referral" value="AUTUMN2025" readonly>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Litabe Technologies Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
